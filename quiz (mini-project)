@@ -1,0 +1,72 @@
+questions=[
+    {
+        "ask":"Where was the first modern Olympic Games held?",
+        "options":["A.Athens","B.France","C.Sappro","D.New York"],
+        "answer":"A"
+    },
+
+
+{
+        "ask":"What was the clothing company Nike originally called?",
+        "options":["A.the Dassler Brothers Shoe Factory","B.Ruda","C.Dr. Martens shoes","D.Blue Ribbon Sports"],
+        "answer":"D"
+    },
+
+
+{
+        "ask":"When was Netflix founded",
+        "options":["A.2001","B.1997","C.2009","D.2005"],
+        "answer":"B"
+    },
+
+
+{
+        "ask":"Who invented the World Wide Web, and when?",
+        "options":["A.Bob Khan(1938)","B.Vinit Cerf(1943)","C.Tim Berners Lee(1990)","D.Jhon McCarthy(1989)"],
+        "answer":"C"
+    },
+
+
+
+{
+        "ask":"Where is Billie Eilish from? ",
+        "options":["A.Los Angles","B.Dallas","C.Ohio","D.New York"],
+        "answer":"A"
+    },
+
+
+
+{
+        "ask":"When did they open the London underground?",
+        "options":["A.1909","B.1863","C.1990","D.1890"],
+        "answer":"B"
+    },
+
+
+
+
+{
+        "ask":"What happened on July 20th, 1969?",
+        "options":["A.Twin Towers got Smoked","B.The raise of LGBTQ+","C.The niggers got freedom","D.Apollo 11 Landed on the moon"],
+        "answer":"D"
+    }
+]
+
+
+def the_quiz(questions):
+    score=0
+    for question in questions:
+        print(question["ask"])
+        for option in question["options"]:
+            print(option)
+        result=input("Enter any one of the options(A,B,C and D)").upper()
+        if result == question["answer"]:
+            print("You've Guessed Right","\n")
+            score +=1
+        else:
+            print("You have guessed wrong!Better Luck next time! The correct answer is",question["answer"],"\n")
+    print(f"You gussed {score} out of {len(questions)}")
+
+
+the_quiz(questions)
+
