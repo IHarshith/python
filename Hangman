@@ -1,0 +1,29 @@
+import random
+words= ['armory','battlefield','pneumonia','versioncontrol','arpanet','zimbabwe']
+
+chosen_word = random.choice(words)
+display_words = ['_' for _ in chosen_word]
+attempts = 4
+
+print('Welcome to Hangman!!')
+
+while attempts>0 and '_' in display_words:
+    print('\n'+ " ".join(display_words))
+    guess = input("Guess the Word: ").lower()
+    if guess in chosen_word:
+        for index,letter in enumerate(chosen_word):
+            if letter == guess:
+                display_words[index] = guess
+    else:
+        print("Worng Guess!!Guess again")
+        attempts-=1
+
+
+if '_' not in guess:
+    print("You have guessed correct!")
+    print(" ".join(display_words))
+    print("You've Won")
+else:
+    print("You ran out of attempts.")
+    print("The word was :"+chosen_word)
+    print("You Lost")
