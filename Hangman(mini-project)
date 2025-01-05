@@ -1,6 +1,7 @@
 import random
 words= ['armory','battlefield','pneumonia','versioncontrol','arpanet','zimbabwe']
 
+//Takes a random word from the list of words.
 chosen_word = random.choice(words)
 display_words = ['_' for _ in chosen_word]
 attempts = 4
